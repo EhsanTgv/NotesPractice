@@ -16,6 +16,8 @@
 		3DC40D56283F9461009822A1 /* NotesPracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC40D55283F9461009822A1 /* NotesPracticeTests.swift */; };
 		3DC40D60283F9461009822A1 /* NotesPracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC40D5F283F9461009822A1 /* NotesPracticeUITests.swift */; };
 		3DC40D62283F9461009822A1 /* NotesPracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC40D61283F9461009822A1 /* NotesPracticeUITestsLaunchTests.swift */; };
+		3DC40D6F283F9D30009822A1 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC40D6E283F9D30009822A1 /* NoteViewController.swift */; };
+		3DC40D71283FBA80009822A1 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC40D70283FBA80009822A1 /* EntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		3DC40D5B283F9461009822A1 /* NotesPracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NotesPracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DC40D5F283F9461009822A1 /* NotesPracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesPracticeUITests.swift; sourceTree = "<group>"; };
 		3DC40D61283F9461009822A1 /* NotesPracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesPracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3DC40D6E283F9D30009822A1 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		3DC40D70283FBA80009822A1 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				3DC40D47283F9461009822A1 /* Assets.xcassets */,
 				3DC40D49283F9461009822A1 /* LaunchScreen.storyboard */,
 				3DC40D4C283F9461009822A1 /* Info.plist */,
+				3DC40D6E283F9D30009822A1 /* NoteViewController.swift */,
+				3DC40D70283FBA80009822A1 /* EntryViewController.swift */,
 			);
 			path = NotesPractice;
 			sourceTree = "<group>";
@@ -258,6 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DC40D6F283F9D30009822A1 /* NoteViewController.swift in Sources */,
+				3DC40D71283FBA80009822A1 /* EntryViewController.swift in Sources */,
 				3DC40D43283F9460009822A1 /* ViewController.swift in Sources */,
 				3DC40D3F283F9460009822A1 /* AppDelegate.swift in Sources */,
 				3DC40D41283F9460009822A1 /* SceneDelegate.swift in Sources */,
