@@ -16,12 +16,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         table?.delegate = self
-        table?.dataSource = self
+        table? .dataSource = self
         title = "Notes"
     }
     
     @IBAction func didTapNewNote(){
-        
+        guard let vc = storyboard?.instantiateViewController(identifier: "new") as? EntryViewController else {
+            return
+        }
+        vc.title = "New Note"
+        vc.navigationItem.largeTitleDisplayMode = .never
+        vc.completion = { noteTitle,note in
+            self.navigationController?.popToRootViewController(animated: true)
+            self.models.append((title: noteTitle, note: note))
+            self.label.isHidden = true
+            self.table?.isHidden = false
+            self.table?.reloadData()
+        }
+        navigationController?.pushViewController(vc, animated:true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

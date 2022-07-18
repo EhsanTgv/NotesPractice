@@ -66,7 +66,13 @@
                             <constraint firstItem="GhE-d6-dIS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tWw-Fw-UnA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Notes" id="8qC-GB-NNG"/>
+                    <navigationItem key="navigationItem" title="Notes" id="8qC-GB-NNG">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="cfq-YT-0hy">
+                            <connections>
+                                <action selector="didTapNewNote" destination="BYZ-38-t0r" id="P0w-Lp-aGf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="label" destination="GhE-d6-dIS" id="V4A-vT-bdR"/>
                         <outlet property="table" destination="QOT-Nh-3gk" id="bUq-5a-IIR"/>
@@ -101,9 +107,36 @@
                     <view key="view" contentMode="scaleToFill" id="lJO-6y-Ns7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UhC-C8-g57">
+                                <rect key="frame" x="10" y="54" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Kxw-br-3ed">
+                                <rect key="frame" x="10" y="98" width="394" height="754"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Xb2-r5-1bH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xb2-r5-1bH" firstAttribute="bottom" secondItem="Kxw-br-3ed" secondAttribute="bottom" constant="10" id="Dh4-Pq-gqf"/>
+                            <constraint firstItem="Kxw-br-3ed" firstAttribute="leading" secondItem="Xb2-r5-1bH" secondAttribute="leading" constant="10" id="Ds1-tm-sup"/>
+                            <constraint firstItem="Xb2-r5-1bH" firstAttribute="trailing" secondItem="Kxw-br-3ed" secondAttribute="trailing" constant="10" id="PfJ-zq-rNP"/>
+                            <constraint firstItem="UhC-C8-g57" firstAttribute="top" secondItem="Xb2-r5-1bH" secondAttribute="top" constant="10" id="U5b-V7-baD"/>
+                            <constraint firstItem="Xb2-r5-1bH" firstAttribute="trailing" secondItem="UhC-C8-g57" secondAttribute="trailing" constant="10" id="i7o-0c-XDS"/>
+                            <constraint firstItem="UhC-C8-g57" firstAttribute="leading" secondItem="Xb2-r5-1bH" secondAttribute="leading" constant="10" id="ir8-Aq-aIj"/>
+                            <constraint firstItem="Kxw-br-3ed" firstAttribute="top" secondItem="UhC-C8-g57" secondAttribute="bottom" constant="10" id="upQ-OB-Bwz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="noteField" destination="Kxw-br-3ed" id="A47-7h-aCG"/>
+                        <outlet property="titleField" destination="UhC-C8-g57" id="xAb-uw-mFn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8fQ-hT-4KS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -126,6 +159,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
