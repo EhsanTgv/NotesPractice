@@ -149,9 +149,40 @@
                     <view key="view" contentMode="scaleToFill" id="umq-sE-rvk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOu-dv-Iom">
+                                <rect key="frame" x="10" y="54" width="394" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="dSY-Ox-77T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="i4W-9D-hkN">
+                                <rect key="frame" x="10" y="124" width="394" height="728"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Sn9-a1-8sJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="FOu-dv-Iom" firstAttribute="top" secondItem="Sn9-a1-8sJ" secondAttribute="top" constant="10" id="05u-k3-GvS"/>
+                            <constraint firstItem="i4W-9D-hkN" firstAttribute="leading" secondItem="Sn9-a1-8sJ" secondAttribute="leading" constant="10" id="EFA-SK-r94"/>
+                            <constraint firstItem="FOu-dv-Iom" firstAttribute="leading" secondItem="Sn9-a1-8sJ" secondAttribute="leading" constant="10" id="FYq-7R-utv"/>
+                            <constraint firstItem="Sn9-a1-8sJ" firstAttribute="bottom" secondItem="i4W-9D-hkN" secondAttribute="bottom" constant="10" id="Jb1-vb-vum"/>
+                            <constraint firstItem="Sn9-a1-8sJ" firstAttribute="trailing" secondItem="FOu-dv-Iom" secondAttribute="trailing" constant="10" id="YhW-b8-LjI"/>
+                            <constraint firstItem="Sn9-a1-8sJ" firstAttribute="trailing" secondItem="i4W-9D-hkN" secondAttribute="trailing" constant="10" id="fWW-Mq-cxl"/>
+                            <constraint firstItem="i4W-9D-hkN" firstAttribute="top" secondItem="FOu-dv-Iom" secondAttribute="bottom" constant="10" id="vCD-KU-GbC"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="noteLabel" destination="i4W-9D-hkN" id="neD-Rv-DEz"/>
+                        <outlet property="titleLabel" destination="FOu-dv-Iom" id="U7E-sR-t3o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ysS-42-Sae" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
